@@ -20,7 +20,7 @@ const HeroSection = () => {
             sx={{ fontWeight: 'bold', mb: 3 }}
             component="div"
           >
-            Effortless Order Foods
+            Effortless Order Foods``
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
             ELO is decentralized reward system, the overall system including reward will be extended

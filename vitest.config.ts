@@ -11,12 +11,29 @@ export default defineConfig({
     setupFiles: './vitest.setup.js',
     include: ['src/**/*.{test,spec}.{js,jsx,ts,tsx}'],
     coverage: {
-      provider: 'v8',
+      provider: 'istanbul',
+      // provider: 'v8',
+      reporter: ['text', 'json', 'html', 'lcov'],
     },
+    exclude: [
+      '**/node_modules/**',
+      '**/*.js',
+      '**/*.ts',
+      'jest.config.ts',
+      'postcss.config.js',
+      'tailwind.config.js',
+      'vite.config.ts',
+      '**/coverage/**',
+      '**/dist/**',
+      '**/assets/**',
+      'src/**/*.d.ts',
+      "**/src/utils/**"
+    ]
   },
   resolve: {
     alias: {
       assets: path.resolve(__dirname, 'src/assets'),
     },
   },
+  
 });

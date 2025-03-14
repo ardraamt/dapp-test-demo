@@ -12,7 +12,6 @@ describe("FunFactSection", () => {
       </Router>
     );
 
-    // Fix: Ensure correct match for "Fun Fact"
     const funFactTitle = screen.getByText((content, node) => node?.textContent === "Fun Fact");
     expect(funFactTitle).toBeInTheDocument();
 

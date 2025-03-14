@@ -3,13 +3,12 @@ import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfil
 import react from '@vitejs/plugin-react-swc';
 import rollupNodePolyFill from 'rollup-plugin-polyfill-node';
 import { defineConfig, loadEnv, splitVendorChunkPlugin } from 'vite';
-import log from 'snore-log';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
     const envVariables = loadEnv(mode, process.cwd());
     return {
-        plugins: [react(), splitVendorChunkPlugin(), log()],
+        plugins: [react(), splitVendorChunkPlugin()],
         publicDir: 'public',
         define: {
             // Inject environment variables into the client-side code
