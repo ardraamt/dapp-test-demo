@@ -6,6 +6,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Badge from '@mui/material/Badge';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Button from '@mui/material/Button';
+import { useTheme } from '@mui/material/styles';
+
 
 //const Navbar = ({mainLinks, presaleLink, bridgeLink, moreMenuLinks, comingSoonLink, handleClickContracts}) => {
 const Navbar = ({
@@ -18,6 +20,8 @@ const Navbar = ({
   const { pathname } = useLocation();
   const [anchorMoreEl, setAnchorMoreEl] = useState(null);
   const openMoreMenu = Boolean(anchorMoreEl);
+
+  const theme = useTheme()
 
   const handleClickMoreMenu = (event) => {
     setAnchorMoreEl(event.currentTarget);

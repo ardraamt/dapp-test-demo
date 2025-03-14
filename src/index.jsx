@@ -11,7 +11,7 @@ import { ethers } from 'ethers';
 
 const theme = createTheme({
   palette: {
-    mode: 'light',
+    mode: 'dark',
     primary: {
       //main: '#1a90ff',
       main: '#1cac1d',
@@ -35,6 +35,12 @@ const theme = createTheme({
           textTransform: 'inherit',
           borderRadius: 25,
         },
+        root: {
+          color: "white",
+          "&:hover": {
+            backgroundColor: "rgba(0, 0, 0, 0.9)",
+          },
+        }
       },
     },
   },

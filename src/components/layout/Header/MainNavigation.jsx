@@ -12,6 +12,8 @@ import Contracts from '../../shared/Contracts';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import SideDrawer from './SideDrawer';
+import { useTheme } from "@mui/material/styles";
+
 
 // const mainLinks = [
 //   { label: "Home", href: "/" },
@@ -43,6 +45,8 @@ const MainNavigation = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
   const [contractsDialogOpen, setContractsDialogOpen] = useState(false);
 
+  const theme = useTheme();
+
   const handleContractsDialogToggle = () => {
     setContractsDialogOpen(!contractsDialogOpen);
   };
@@ -58,7 +62,10 @@ const MainNavigation = () => {
         color="inherit"
         enableColorOnDark
         elevation={0}
-        sx={{ bgcolor: 'rgba(255,255,255,0.72)', backdropFilter: 'blur(20px)' }}
+        sx={{ 
+          bgcolor: theme.palette.background.default, 
+          backdropFilter: 'blur(20px)' ,
+        }}
       >
         <Toolbar sx={{ borderBottom: 1, borderColor: 'grey.100' }}>
           <IconButton

@@ -5,9 +5,12 @@ import Box from '@mui/material/Box';
 import PhaseI from '../../components/pre-sale/PhaseI/Renderer';
 import PreSaleSteps from 'components/pre-sale/PreSaleSteps';
 //import Ended from './Ended';
+import { useTheme } from '@mui/material/styles';
 
 export default function PreSale() {
   //return <Ended />
+
+  const theme = useTheme()
 
   return (
     <Fragment>
@@ -28,8 +31,8 @@ export default function PreSale() {
         </Box>
       </Container>
       <Box
-        sx={{
-          bgcolor: 'neutral.main',
+         sx={{
+          bgcolor: theme.palette.background.palette,
           py: 7,
           borderTop: 1,
           borderBottom: 1,

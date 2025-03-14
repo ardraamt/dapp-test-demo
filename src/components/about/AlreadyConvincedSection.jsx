@@ -4,15 +4,17 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from 'react-router-dom';
+import { useTheme } from '@mui/material/styles';
 
 const AlreadyConvincedSection = () => {
+  const theme = useTheme()
   return (
     <Box
       id="eloNft"
       sx={{
         py: 7,
         textAlign: 'center',
-        bgcolor: 'neutral.main',
+        bgcolor:theme.palette.background.default,
         borderTop: 1,
         borderBottom: 1,
         borderColor: 'grey.100',

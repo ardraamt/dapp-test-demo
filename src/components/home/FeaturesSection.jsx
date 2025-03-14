@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import cubes from 'assets/images/cubes.svg';
+import { useTheme } from '@mui/material/styles';
 
 // Need to change later features of ELO projects
 const features = [
@@ -19,8 +20,9 @@ const features = [
 ];
 
 const FeaturesSection = () => {
+  const theme = useTheme()
   return (
-    <Box sx={{ bgcolor: 'neutral.main', py: 7, borderTop: 1, borderColor: 'grey.100' }}>
+     <Box sx={{ bgcolor: theme.palette.background.default, py: 7, borderTop: 1, borderColor: 'grey.100' }}>
       <Container>
         <Box sx={{ maxWidth: '500px' }}>
           <Typography variant="body1" color="primary.main" sx={{ mb: 1, fontWeight: 700 }}>

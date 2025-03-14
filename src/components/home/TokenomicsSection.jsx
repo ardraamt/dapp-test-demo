@@ -7,6 +7,7 @@ import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgr
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
@@ -56,11 +57,12 @@ const statistics = [
 ];
 
 const TokenomicsSection = () => {
+  const theme = useTheme()
   return (
     <Box
       id="tokenomics"
       sx={{
-        bgcolor: 'neutral.main',
+        bgcolor: theme.palette.background.default,
         py: 7,
         borderBottom: 1,
         borderColor: 'grey.100',
