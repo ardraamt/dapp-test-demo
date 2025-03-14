@@ -43,7 +43,7 @@
     "react-player": "^2.10.0",
     "react-router": "^5.2.1",
     "react-router-dom": "^5.3.0",
-    "request": "^2.88.2",
+    "request": "^2.88.2", 
     "sqlite3": "^5.1.6",
     "web-vitals": "^1.0.1",
     "web3": "1.0.0-beta.55",
@@ -59,8 +59,8 @@
     "deploy": "node Truffle/scripts/deployContract.js",
     "devchain": "node Truffle/scripts/devChain.js",
     "watch:events": "moralis-admin-cli add-contract",
-    "connect": "moralis-admin-cli connect-local-devchain",
-    "prepare": "npm run start"
+    "connect": "moralis-admin-cli connect-local-devchain"
+    
   },
   "eslintConfig": {
     "extends": [
