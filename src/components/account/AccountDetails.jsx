@@ -15,6 +15,7 @@ import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import CopyToClipboard from 'components/shared/CopyToClipboard.jsx';
+
 import Button from '@mui/material/Button';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useWalletConnector } from './WalletConnector.jsx';
