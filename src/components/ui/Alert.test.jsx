@@ -68,6 +68,3 @@ describe('SnackbarAlert', () => {
     }, { timeout: 7000 }); 
   });
 });
-
-
-
